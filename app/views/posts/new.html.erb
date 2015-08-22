@@ -10,7 +10,15 @@
 <h4>Rails form - with Form Helpers</h4>
 <%= form_tag '/posts' do %>
   <%= label_tag :title %>
-  <%= text_field_tag :title %>
+  <%= text_field_tag :title, "Input a title" %>
   <br>
   <%= submit_tag "Create Event", class: 'btn btn-primary' %>
+<% end %>
+
+<h3>Model Backed Rails Form Helpers</h3>
+<%= form_for @post  do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.submit "Create Post", class: 'btn btn-primary' %>
 <% end %>

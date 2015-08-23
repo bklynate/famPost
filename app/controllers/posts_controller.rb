@@ -26,7 +26,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    
     if @post.update(post_params)
       flash[:notice] = "Your Event Has Been Updated!"
       redirect_to posts_path
@@ -39,5 +38,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit!
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end

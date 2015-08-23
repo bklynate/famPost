@@ -19,6 +19,9 @@
 <%= form_for @post  do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  <br>
+  <br/>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <br/>
   <%= f.submit "Create Post", class: 'btn btn-primary' %>
 <% end %>

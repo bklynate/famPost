@@ -1,4 +1,4 @@
-PostitTemplate::Application.routes.draw do
+FamPost::Application.routes.draw do
   root to: 'posts#index'
 
   # get '/posts', to: 'posts#index'

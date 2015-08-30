@@ -13,4 +13,5 @@ FamPost::Application.routes.draw do
   end
 
   resources :categories, only: [:create,:show,:new]
+  resources :users, except: [:destroy,:index, :new] 
 end

@@ -10,7 +10,8 @@ class UserController < ApplicationController
 
     if @user.save
       flash[:notice] = "Your account has been created."
-      redirect_to users_path
+      session[:id] = @user.id
+      redirect_to root_path
     else
       render :new
     end
@@ -21,7 +22,7 @@ class UserController < ApplicationController
   def update
     if user.update
       flash[:notice] = "Your account has had been updated."
-      redirect_to users_path
+      redirect_to users_path(@user)
     else
       render :edit
     end

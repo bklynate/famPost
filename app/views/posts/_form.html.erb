@@ -1,6 +1,6 @@
 <div class='well'>
   <h3>Model Backed Rails Form Helpers</h3> 
-
+  <%= render 'shared/errors', obj: @post %>
   <%= form_for @post  do |f| %>
   <div class="control-group">
     <%= f.label :title %>

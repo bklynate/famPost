@@ -20,9 +20,9 @@ class UserController < ApplicationController
   def edit;end
 
   def update
-    if user.update
+    if @user.update
       flash[:notice] = "Your account has had been updated."
-      redirect_to users_path(@user)
+      redirect_to user_path(@user)
     else
       render :edit
     end

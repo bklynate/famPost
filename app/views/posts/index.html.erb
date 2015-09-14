@@ -10,7 +10,7 @@
       <h4><%= link_to post.title, post_path(post) %></h4>
       <p><%= post.description %></p>
       <p>
-        <span class='quiet'>posted by </span><%= post.creator %>
+        <span class='quiet'>posted by </span><%= post.creator.username %>
         <small>at <%= post.created_at %></small>
         <%= link_to ("edit event here"), edit_post_path(post) %>
       </p>

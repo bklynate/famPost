@@ -11,7 +11,7 @@
       <p><%= post.description %></p>
       <p>
         <span class='quiet'>posted by </span><%= post.creator.username %>
-        <small>at <%= post.created_at %></small>
+        <small>at <%= time_ago_in_words(post.created_at) %></small>
         <%= link_to ("edit event here"), edit_post_path(post) %>
       </p>
       <span>

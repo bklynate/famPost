@@ -1,5 +1,5 @@
 FamPost::Application.routes.draw do
-  root to: 'posts#index'
+  root'posts#index'
 
   # get '/posts', to: 'posts#index'
   # get '/posts/:id', to: 'post#show'
@@ -13,5 +13,5 @@ FamPost::Application.routes.draw do
   end
 
   resources :categories, only: [:create,:show,:new]
-  resources :users, except: [:destroy,:index, :new] 
+  resources :users, except: [:destroy,:index, :new]
 end

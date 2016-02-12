@@ -1,0 +1,16 @@
+p>
+  <%= render @post.categories %>
+</p>
+<br>
+<%= render 'shared/content_header', title: @post.title %>
+
+<h5>Create a comment: </h5>
+
+<%= form_for [@post, @comment] do |f| %>
+  <%= render 'shared/errors', obj: @comment %>
+  <%= f.text_area :body %>
+  <br/>
+  <%= f.submit "Create a Comment", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Go back to all events", posts_path %>

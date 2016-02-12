@@ -12,6 +12,11 @@ FamPost::Application.routes.draw do
     resources :comments, only: [:create]
   end
 
+<<<<<<< HEAD
   resources :categories, only: [:create,:show,:new]
   resources :users, except: [:destroy,:index, :new] 
+=======
+  resources :categories, only: [:create, :show, :new]
+  resources :users, except: [:destroy, :index, :new]
+>>>>>>> 7cc959391405710a55ecf9262c41fa4ca3d29d8e
 end

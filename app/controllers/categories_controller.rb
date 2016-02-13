@@ -14,12 +14,8 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def show
-<<<<<<< HEAD
-    
-=======
+  def shows
     @category = Category.find(params[:id])
->>>>>>> 7cc959391405710a55ecf9262c41fa4ca3d29d8e
   end
 
   private
